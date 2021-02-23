@@ -1,1 +1,1 @@
-# spring5-reactive-mongo-recipe-app
+# Spring Reactive MongoDB Application
