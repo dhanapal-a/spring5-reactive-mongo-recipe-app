@@ -1,7 +1,5 @@
 package org.dp.sf.controllers;
 
-import org.apache.tomcat.util.http.fileupload.IOUtils;
-import org.dp.sf.commands.RecipeCommand;
 import org.dp.sf.services.ImageService;
 import org.dp.sf.services.RecipeService;
 import org.springframework.stereotype.Controller;
@@ -11,11 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-
-import javax.servlet.http.HttpServletResponse;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 
 /**
  * Created by jt on 7/3/17.
@@ -46,6 +39,7 @@ public class ImageController {
         return "redirect:/recipe/" + id + "/show";
     }
 
+    /*
     @GetMapping("recipe/{id}/recipeimage")
     public void renderImageFromDB(@PathVariable String id, HttpServletResponse response) throws IOException {
         RecipeCommand recipeCommand = recipeService.findCommandById(id);
@@ -63,4 +57,5 @@ public class ImageController {
             IOUtils.copy(is, response.getOutputStream());
         }
     }
+    */
 }
